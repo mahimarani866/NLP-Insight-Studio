@@ -1,4 +1,4 @@
-# 🧠 NLP Insight Studio — Smart Text Analysis Tool
+# 🧠 NLPApp — Smart Text Analysis Tool
 
 > **Turn raw text into structured intelligence — instantly.**  
 > A desktop-grade NLP application that performs sentiment analysis, entity recognition, and emotion prediction through a clean, modern GUI.
@@ -57,6 +57,33 @@ Designed with **clean architecture**, **secure user authentication**, and **expo
 
 ---
 
+## 🧠 How It Works
+
+```
+User Input (text)
+      │
+      ▼
+┌─────────────────────────────────────┐
+│         NLPApp Core Engine          │
+│                                     │
+│  ┌─────────────┐  ┌──────────────┐  │
+│  │  TextBlob   │  │    spaCy     │  │
+│  │  Sentiment  │  │     NER      │  │
+│  └─────────────┘  └──────────────┘  │
+│                                     │
+│  ┌──────────────────────────────┐   │
+│  │   Keyword Emotion Detector   │   │
+│  │   + Sentiment Fallback       │   │
+│  └──────────────────────────────┘   │
+└─────────────────────────────────────┘
+      │
+      ▼
+Results displayed in GUI + saved to JSON history
+      │
+      ▼
+  Export as .txt (optional)
+```
+
 1. **Text is submitted** via the GUI input panel
 2. **TextBlob** computes polarity and subjectivity for sentiment scoring
 3. **spaCy** runs `en_core_web_sm` to extract named entities and their labels
@@ -64,13 +91,59 @@ Designed with **clean architecture**, **secure user authentication**, and **expo
 5. Results are rendered in structured panels and **persisted to the user's JSON history**
 
 ---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Purpose |
+|---|---|---|
+| **GUI** | Tkinter | Desktop interface & user interaction |
+| **NLP — Sentiment** | TextBlob | Polarity & subjectivity analysis |
+| **NLP — NER** | spaCy (`en_core_web_sm`) | Named entity extraction |
+| **Emotion Logic** | Custom Python module | Keyword matching + fallback logic |
+| **Data Storage** | JSON (local files) | User auth & analysis history |
+| **Language** | Python 3.10+ | Core application runtime |
+
+---
+
+## 📂 Project Structure
+
+```
+NLPApp/
+│
+├── main.py                  # Application entry point
+├── auth/
+│   ├── login.py             # Login window & authentication logic
+│   ├── register.py          # Registration logic
+│   └── users.json           # Local user database
+│
+├── core/
+│   ├── sentiment.py         # TextBlob sentiment analysis
+│   ├── ner.py               # spaCy named entity recognition
+│   ├── emotion.py           # Emotion prediction engine
+│   └── counter.py           # Word & character counter
+│
+├── gui/
+│   ├── dashboard.py         # Main application window
+│   ├── history_panel.py     # Analysis history viewer
+│   └── styles.py            # GUI theme & styling constants
+│
+├── data/
+│   └── history/             # Per-user analysis history (JSON)
+│
+├── exports/                 # Exported .txt result files
+├── requirements.txt
+└── README.md
+```
+
+---
+
 ## ⚙️ Installation
 
 **Prerequisites:** Python 3.10 or higher
 
 ```bash
 # 1. Clone the repository
-git https://github.com/mahimarani866
+git clone https://github.com/yourusername/NLPApp.git
 cd NLPApp
 
 # 2. Create and activate a virtual environment (recommended)
@@ -109,6 +182,20 @@ python main.py
 
 ---
 
+## 📸 Screenshots
+
+> _Screenshots coming soon — replace placeholders below with actual app screenshots_
+
+| Login Screen | Dashboard |
+|:---:|:---:|
+| `[Add screenshot here]` | `[Add screenshot here]` |
+
+| Sentiment Results | NER Output |
+|:---:|:---:|
+| `[Add screenshot here]` | `[Add screenshot here]` |
+
+---
+
 ## 🚀 Future Improvements
 
 - [ ] **Multilingual support** — extend sentiment & NER to 10+ languages via spaCy models
@@ -137,16 +224,22 @@ Please follow [PEP 8](https://peps.python.org/pep-0008/) coding standards and in
 
 ---
 
+## 📜 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
 ## 👩‍💻 Author
 
 <table>
   <tr>
     <td align="center">
-      <strong>M Mahima Rani</strong><br/>
+      <strong>Your Name</strong><br/>
       <sub>Data Analyst · NLP Enthusiast · Python Developer</sub><br/><br/>
-      <a href="https://github.com/mahimarani866">🐙 GitHub</a> &nbsp;|&nbsp;
-      <a href="https://www.linkedin.com/in/m-mahima-rani/">💼 LinkedIn</a> &nbsp;|&nbsp;
-      <a href="m.mahimarani866@gmail.com">📧 Email</a>
+      <a href="https://github.com/yourusername">🐙 GitHub</a> &nbsp;|&nbsp;
+      <a href="https://linkedin.com/in/yourprofile">💼 LinkedIn</a> &nbsp;|&nbsp;
+      <a href="mailto:your@email.com">📧 Email</a>
     </td>
   </tr>
 </table>
