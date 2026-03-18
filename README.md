@@ -137,12 +137,6 @@ Please follow [PEP 8](https://peps.python.org/pep-0008/) coding standards and in
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 👩‍💻 Author
 
 <table>
