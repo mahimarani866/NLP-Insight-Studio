@@ -1,0 +1,16 @@
+[
+  {
+    "timestamp": "2026-03-18 19:37:36",
+    "user": "M Mahima Rani",
+    "type": "Sentiment Analysis",
+    "text": "i love to explore world",
+    "result": "\ud83d\ude0a Positive\n\nConfidence: 0.5\nPolarity Score: 0.5"
+  },
+  {
+    "timestamp": "2026-03-18 19:45:48",
+    "user": "M Mahima Rani",
+    "type": "Sentiment Analysis",
+    "text": "i enjoy adventuring",
+    "result": "\ud83d\ude0a Positive\n\nConfidence: 0.4\nPolarity Score: 0.4"
+  }
+]
