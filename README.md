@@ -36,7 +36,7 @@ NLP-Insight-Studio/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/NLP-Insight-Studio.git
+git clone https://github.com/mmahimarani866/NLP-Insight-Studio.git
 cd NLP-Insight-Studio
 
 # 2. Install dependencies
